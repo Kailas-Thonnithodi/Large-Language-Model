@@ -6,5 +6,5 @@ Has basically a similar structure to SimpleTokeniserV2, however implements the B
 
 if __name__ == "__main__":
     tiktokenisor = tiktoken.get_encoding("o200k_base")
-    integers = tiktokenisor.encode("Hello World world")
-    print(sum(integers))
+    integers = tiktokenisor.encode("<|unk|>", allowed_special={})
+    print(integers)
